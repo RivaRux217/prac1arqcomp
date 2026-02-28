@@ -28,7 +28,7 @@ int main(int argc, char** argv)
     int R = (D * sizeof(int) < CLS) ?  L * (E/D) : L; //Numero de elementos aos que accedemos
     int tamA = (R - 1) * D + 1; //Tamaño total de A
     int* A = (int*) aligned_alloc(CLS, tamA * sizeof(int)); //Vector sobre o que realizaremos a operación
-    alignas(CLS) double S[10]; //Vector cos resultados obtidos
+    alignas(CLS) int S[10]; //Vector cos resultados obtidos
     alignas(CLS) double T[10]; //Vector cos tempos de cada cálculo
     double s_med = 0, t_med = 0; //Variables cos valores medios
     int* ind = (int*) aligned_alloc(CLS, R * sizeof(int)); //Vector de índices
