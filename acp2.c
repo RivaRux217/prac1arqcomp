@@ -33,6 +33,8 @@ int main(int argc, char** argv)
         exit(EXIT_FAILURE);
     }
 
+    srand(time(NULL));
+
     int D = atoi(argv[1]); //Valor de salto, usado para estudiar a localidad
     int L = atoi(argv[2]); //Valor para o que se toman as medidas de ciclos
     int R = (D * sizeof(int) < CLS) ?  L * (E/D) : L; //Numero de elementos aos que accedemos

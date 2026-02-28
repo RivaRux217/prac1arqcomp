@@ -12,6 +12,7 @@ gcc acp1.c -o acp1 -O0 -lm
 
 for i in {1..10}
 do
+	echo -e "\nEXPERIMENTO $i\n"
 	for D in {1,2,16,64,512}
 	do
 		for L in {384,1152,10240,15360,40960,81920,163840}
