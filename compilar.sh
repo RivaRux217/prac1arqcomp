@@ -8,7 +8,7 @@
 
 # Sustituir los valores de Di y Li por los calculados para la realización de la práctica.
 
-gcc acp1.c -o acp1 -O0 -lm
+gcc acp1.c -o acp1 -O0
 
 for i in {1..10}
 do
