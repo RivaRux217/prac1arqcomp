@@ -12,17 +12,6 @@
 #define CLS 64 //Tamaño dunha línea de caché
 #define E 8 //Número de doubles que caben en 1 línea caché
 
-//Función de apoyo a qsort
-int compararValores(const void *a, const void *b) 
-{
-    double arg1 = *(const double*)a;
-    double arg2 = *(const double*)b;
-
-    if (arg1 < arg2) return -1;
-    if (arg1 > arg2) return 1;
-    return 0;
-}
-
 int main(int argc, char** argv)
 {
 
@@ -94,13 +83,11 @@ int main(int argc, char** argv)
     for(int i = 0; i < 10; i++)
     {
         s_med += S[i];
+        t_med += T[i];
     }
 
-    //Ordenamos vector de tiempos para obtener los 3 mejores y hacer la media con ellos
-    qsort(T, 10, sizeof(double), compararValores); 
-
     s_med /= 10;
-    t_med = pow(T[0] * T[1] * T[2], 1.0/3); //Calculamos tiempo medio como resultado de la media geométrica de los 3 mejores valores
+    t_med /= 10;
 
     printf("(D: %d, L: %d) Resultado medio: %lf. Tiempo medio: %1.10lf\n", D, L, s_med, t_med);
 
