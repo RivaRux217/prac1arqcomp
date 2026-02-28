@@ -81,6 +81,7 @@ int main(int argc, char** argv)
 
     s_med /= 10;
     t_med /= 10;
+    t_med /= R; //Buscamos obter o tempo medio de cada acceso, polo que temos que dividir o tempo total entre o número de accesos
 
     printf("(D: %d, L: %d) Resultado medio: %lf. Tiempo medio: %1.10lf\n", D, L, s_med, t_med);
 
